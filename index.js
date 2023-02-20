@@ -21,6 +21,10 @@ wss.on('connection', function connection(ws) {
   });
 });
 
+app.get('/', function(req, res){
+  res.send("server is running");
+})
+
 app.post('/', function (req, res) {
   let data = [];
   req.on('data', chunk => {
